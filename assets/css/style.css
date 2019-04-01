@@ -2,6 +2,7 @@ body {
     background-image: url("assets/images/background.png")
 }
 
+/* THIS IS THE STYLING FOR THE HEADER OF PAGE */
 
 .header {
     border: 3px solid black;
@@ -18,7 +19,11 @@ body {
     font-size: 20px;
 }
 
+/* THIS IS MY STYLING FOR PICTURES OF CRYSTALS */
+.crystals {
+    clear: both;
+}
 .crystalImage {
-    height: 60px;
+    height: 100px;
     margin: 0 auto;
 }
