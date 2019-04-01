@@ -64,8 +64,8 @@ function loser () {
 
 //USING JQUERY WE MAKE THE CRYSTALS CLICKABLE BY ADDING EVENT LISTENERS 
 //Creating multiple crystals each with their own unique number value.
-// EVENT LISTENER FOR GREEN CRYSTAL 
-
+//COULDNT FIGURE IT OUT HOW TO DO IT IN ONE CODE LIKE THE INCLASS ACTIVITY, I WENT WITH A YOUTUBE TUTORIAL
+//CLICK EVENT FOR GREEN CRYSTAL 
 
   $('#green').on ('click', function(){
     totalScore = totalScore + green;
