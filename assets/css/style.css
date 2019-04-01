@@ -1,4 +1,5 @@
 body {
+    background-color: beige;
     background-image: url("assets/images/background.png")
 }
 
@@ -22,6 +23,7 @@ body {
 
 /* THIS IS MY STYLING FOR PICTURES OF CRYSTALS */
 .crystals {
+    background-color: white;
     border: 1px solid black;
     float: center;
     margin: 15px auto;
@@ -36,6 +38,7 @@ body {
 
 /* COMBINES NUMBER TO MATCH AND TOTAL SCORE INTO THE SAME DIV*/
 .totalScore {
+    background-color: aquamarine;
     border: 1px solid black;
     font-size: 20px;
     text-align: center;
@@ -45,6 +48,7 @@ body {
 }
 
 .scores {
+    background-color: aquamarine;
     border: 1px solid black;
     font-size: 20px;
     text-align: center;
