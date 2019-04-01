@@ -23,3 +23,7 @@ var blue= Math.floor(Math.random()*11+1)
 var totalScore= 0; 
 var winsCounter= 0;
 var lossesCounter= 0;
+
+//USING JQUERY TO UPDATE HTML FILE VIA DOM
+$('#numberWins').text(winsCounter);
+$('#numberLosses').text(lossesCounter);
