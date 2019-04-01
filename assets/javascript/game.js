@@ -9,11 +9,12 @@ $( document ).ready(function(){
     var Random=Math.floor(Math.random()*101+19)
     
 //APPENDING
-//DISPLAYING "APPENDING" RANDOM NUMBER TO THE randNum ID IN HTML FILE 
+//DISPLAYING "APPENDING" RANDOM NUMBER TO THE randNum ID IN HTML FILE VIA DYNAMIC 
 $('#randNumb').text(Random);
 
 
 // CREATING VARIABLES AND RANDOM NUMBERS BETWEEN 1-12 FOR EACH CRYSTAL
+//GOOGLED THIS CODE, IT IS DRY CODING BUT I COULDNT FIGURE OUT HOW TO GIVE EACH CRYSTAL THEIR OWN UNIQUE VALUE 
 green = Math.floor(Math.random()*11+1)
 yellow = Math.floor(Math.random()*11+1)
 red = Math.floor(Math.random()*11+1)
@@ -24,7 +25,7 @@ var totalScore= 0;
 var winsCounter= 0;
 var lossesCounter= 0;
 
-//USING JQUERY TO UPDATE HTML FILE VIA DOM
+//USING JQUERY TO UPDATE HTML FILE VIA DYNAMIC 
 $('#numbWins').text(winsCounter);
 $('#numbLosses').text(lossesCounter);
 
@@ -33,10 +34,10 @@ $('#numbLosses').text(lossesCounter);
 //NEED TO ADD FUNCTION TO RESET THE GAME 
 //LOOK AT HANGMAN GAME FOR FUNCTION INSPIRATION 
 
-function reset(){
+function resetGame (){
     Random=Math.floor(Math.random()*101+19);
-    console.log(Random)
     $('#randNumb').text(Random);
+
     green= Math.floor(Math.random()*11+1);
     yellow= Math.floor(Math.random()*11+1);
     red= Math.floor(Math.random()*11+1);
@@ -45,12 +46,12 @@ function reset(){
     $('#playerScores').text(totalScore);
     } 
 
-//ADDS WINS TO THE TOTAL SCORE 
+// THIS FUNCTION ADDS WINS TO THE TOTAL SCORE IF PLAYER WINS
 function winner() {
     alert("You won!");
   winsCounter++; 
   $('#numbWins').text(winsCounter);
-  reset();
+  resetGame();
 }
 
 //ADDS LOSSES TO THE TOTAL SCORE 
@@ -58,12 +59,14 @@ function loser () {
     alert ("You lose!");
       lossesCounter++;
       $('#numbLosses').text(lossesCounter);
-      reset()
+      resetGame()
     }
 
 //USING JQUERY WE MAKE THE CRYSTALS CLICKABLE BY ADDING EVENT LISTENERS 
-
+//Creating multiple crystals each with their own unique number value.
 // EVENT LISTENER FOR GREEN CRYSTAL 
+
+
   $('#green').on ('click', function(){
     totalScore = totalScore + green;
     $('#playerScores').text(totalScore); 
