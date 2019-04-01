@@ -1,6 +1,6 @@
 // THE BEGINNING OF MY jQUERY CRYSTALS ASIGNMENT CODE
 
-//THIS IS CRUCIAL! THIS IS WHAT GETS OUR JQUERY TO WORK 
+//THIS IS CRUCIAL! THIS IS WHAT GETS OUR JQUERY TO WORK
 $( document ).ready(function(){
 
     //SELECTS A RANDOM NUMBER TO BE MATCHED
@@ -31,7 +31,7 @@ $('#numbLosses').text(lossesCounter);
 
 
 // FUNCTIONS GO IN BELOW
-//NEED TO ADD FUNCTION TO RESET THE GAME 
+//NEED TO ADD FUNCTION TO RESET THE GAME VIDEO DOES AT END 
 //LOOK AT HANGMAN GAME FOR FUNCTION INSPIRATION 
 
 function resetGame (){
@@ -73,6 +73,8 @@ function loser () {
 
 //CLICK EVENT FOR GREEN CRYSTAL AND UPDATING TOTAL SCORE SECTION IN HTML FILE WHEN THE GREEN CRYSTAL IS CLICKED 
   $('#green').on ('click', function(){
+
+  //total score will equal the total score plus the value of green crystal
     totalScore = totalScore + green;
     $('#playerScores').text(totalScore); 
 //SETTING UP CONDITIONALS FOR WINS and LOSSES 
@@ -87,6 +89,7 @@ else if (totalScore > Random){
 
 // THE EVENT FOR YELLOW CRYSTAL AND UPDATING TOTAL SCORE SECTION IN HTML FILE WHEN THE YELLOW CRYSTAL IS CLICKED 
   $('#yellow').on ('click', function(){
+      //total score will equal the total score plus the value of yellow crystal
     totalScore = totalScore + yellow;
     $('#playerScores').text(totalScore); // DYNAMICALLY UPDATES THE PLAYERS TOTAL SCORE IN HTML FILE 
 // SETTING UP CONDITIONALS FOR WINS AND LOSSES // EVOKING FUNCTIONS 
@@ -101,6 +104,7 @@ else if (totalScore > Random){
 
 //THE EVENT FOR THE RED CRYSTAL AND UPDATING TOTAL SCORE SECTION IN HTML FILE WHEN THE RED CRYSTAL IS CLICKED 
   $('#red').on ('click', function(){
+      //total score will equal the total score plus the value of red crystal
     totalScore = totalScore + red;
     $('#playerScores').text(totalScore);
 //SETTING UP CONDITIONALS FOR WINS AND LOSSES // EVOKING FUNCTIONS 
@@ -115,6 +119,7 @@ else if (totalScore > Random){
 
   // THE EVENT FOR THE BLUE CRYSTAL AND UPDATING TOTAL SCORE SECTION IN HTML FILE WHEN THE BLUE CRYSTAL IS CLICKED 
   $('#blue').on ('click', function(){
+      //total score will equal the total score plus the value of blue crystal
     totalScore = totalScore + blue;
     $('#playerScores').text(totalScore);
 //SETTING UP CONDITIONALS FOR WINS AND LOSSES // EVOKING FUNCTIONS 
