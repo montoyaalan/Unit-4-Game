@@ -46,7 +46,7 @@ function reset(){
     } 
 
 //ADDS WINS TO THE TOTAL SCORE 
-function winner (){
+function winner() {
     alert("You won!");
   winsCounter++; 
   $('#numbWins').text(winsCounter);
@@ -54,10 +54,27 @@ function winner (){
 }
 
 //ADDS LOSSES TO THE TOTAL SCORE 
-function loser (){
+function loser () {
     alert ("You lose!");
       lossesCounter++;
       $('#numbLosses').text(lossesCounter);
       reset()
     }
-    
+
+//USING JQUERY WE MAKE THE CRYSTALS CLICKABLE 
+
+  $('#green').on ('click', function(){
+    totalScore = totalScore + green;
+    console.log("Total Score= " + totalScore);
+    $('#playersScore').text(totalScore); 
+
+
+//SETTING UP CONDITIONALS FOR WINS and LOSSES 
+//IT WILL EXECUTE WINNER FUNCTION FIRST IF TOTAL SCORE EQUALS RANDOM
+ if (totalScore == Random){
+          winner();
+        }
+else if (totalScore > Random){
+          loser();
+        }   
+  })
