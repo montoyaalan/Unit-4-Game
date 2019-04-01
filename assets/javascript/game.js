@@ -66,7 +66,7 @@ function loser () {
   $('#green').on ('click', function(){
     totalScore = totalScore + green;
     console.log("Total Score= " + totalScore);
-    $('#playersScore').text(totalScore); 
+    $('#playerScores').text(totalScore); 
 
 
 //SETTING UP CONDITIONALS FOR WINS and LOSSES 
@@ -78,3 +78,15 @@ else if (totalScore > Random){
           loser();
         }   
   })
+
+  $('#yellow').on ('click', function(){
+    totalScore = totalScore + yellow;
+    console.log("Total Score= " + totalScore);
+    $('#playerScores').text(totalScore); 
+        if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        } 
+  })  
