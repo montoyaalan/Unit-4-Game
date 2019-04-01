@@ -61,14 +61,12 @@ function loser () {
       reset()
     }
 
-//USING JQUERY WE MAKE THE CRYSTALS CLICKABLE 
+//USING JQUERY WE MAKE THE CRYSTALS CLICKABLE BY ADDING EVENT LISTENERS 
 
+// EVENT LISTENER FOR GREEN CRYSTAL 
   $('#green').on ('click', function(){
     totalScore = totalScore + green;
-    console.log("Total Score= " + totalScore);
     $('#playerScores').text(totalScore); 
-
-
 //SETTING UP CONDITIONALS FOR WINS and LOSSES 
 //IT WILL EXECUTE WINNER FUNCTION FIRST IF TOTAL SCORE EQUALS RANDOM
  if (totalScore == Random){
@@ -79,10 +77,11 @@ else if (totalScore > Random){
         }   
   })
 
+// THE EVENT LISTENER FOR YELLOW CRYSTAL 
   $('#yellow').on ('click', function(){
     totalScore = totalScore + yellow;
-    console.log("Total Score= " + totalScore);
     $('#playerScores').text(totalScore); 
+// SETTING UP CONDITIONALS FOR WINS AND LOSSES 
         if (totalScore == Random){
           winner();
         }
@@ -90,3 +89,29 @@ else if (totalScore > Random){
           loser();
         } 
   })  
+
+  $('#red').on ('click', function(){
+    totalScore = totalScore + red;
+    $('#playerScores').text(totalScore);
+//SETTING UP CONDITIONALS FOR WINS AND LOSSES 
+          if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        } 
+  })  
+
+  $('#blue').on ('click', function(){
+    totalScore = totalScore + blue;
+    $('#playerScores').text(totalScore);
+//SETTING UP CONDITIONALS FOR WINS AND LOSSES 
+          if (totalScore == Random){
+          winner();
+        }
+        else if ( totalScore > Random){
+          loser();
+        } 
+  });
+
+});
